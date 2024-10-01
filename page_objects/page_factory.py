@@ -1,5 +1,8 @@
+# page_objects/page_factory.py
+
 from playwright.sync_api import Page
 from page_objects.registration_page import RegistrationPage
+from page_objects.contact_information_page import ContactInformationPage  # Ensure this import exists
 
 class PageFactory:
     def __init__(self, page: Page):
@@ -12,13 +15,9 @@ class PageFactory:
         return self._pages[page_class]
 
     @property
-    def login_page(self):
-        return self.get_page(LoginPage)
-
-    @property
     def registration_page(self):
         return self.get_page(RegistrationPage)
 
     @property
-    def home_page(self):
-        return self.get_page(HomePage)
+    def contact_information_page(self):
+        return self.get_page(ContactInformationPage)
