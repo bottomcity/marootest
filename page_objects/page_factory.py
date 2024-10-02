@@ -2,7 +2,8 @@
 
 from playwright.sync_api import Page
 from page_objects.registration_page import RegistrationPage
-from page_objects.contact_information_page import ContactInformationPage  # Ensure this import exists
+from page_objects.contact_information_page import ContactInformationPage
+from page_objects.verify_email_page import VerifyEmailPage  # Import the new page
 
 class PageFactory:
     def __init__(self, page: Page):
@@ -21,3 +22,7 @@ class PageFactory:
     @property
     def contact_information_page(self):
         return self.get_page(ContactInformationPage)
+
+    @property
+    def verify_email_page(self):
+        return self.get_page(VerifyEmailPage)
