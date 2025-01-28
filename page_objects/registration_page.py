@@ -11,7 +11,7 @@ class RegistrationPage:
         self.submit_button = 'button[type="submit"]'
 
     def navigate(self):
-        self.page.goto("https://stg.maroo.us/v/signup")
+        self.page.goto("/")
 
     def register(self, email: str, password: str):
         self.page.fill(self.email_input, email)
