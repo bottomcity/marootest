@@ -1,6 +1,6 @@
 def test_valid_login(page):
     # Navigate to the login page
-    page.goto("https://stg.maroo.us/v/signup")
+    page.goto("/")
 
     # Fill in the login form
     page.fill('input[name="email"]', 'test_username')
